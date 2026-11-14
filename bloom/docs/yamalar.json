@@ -1,0 +1,206 @@
+{
+ "jarvis.ek": {
+  "kaynak": "kaynak/jarvis/ek.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_hud": {
+  "kaynak": "kaynak/jarvis/ek_hud.py",
+  "yeni_modul": true
+ },
+ "jarvis.brain.gemini_live": {
+  "kaynak": "kaynak/jarvis/brain/gemini_live.py",
+  "yama": [
+   "_now_block"
+  ]
+ },
+ "jarvis.app": {
+  "kaynak": "kaynak/jarvis/app.py",
+  "yama": [
+   "App.on_transcript",
+   "App._timer_done",
+   "App._follow_due",
+   "App.on_creator"
+  ]
+ },
+ "jarvis.proactive": {
+  "kaynak": "kaynak/jarvis/proactive.py",
+  "yama": [
+   "Proactive._quiet_mode_off"
+  ]
+ },
+ "jarvis.tools.builtin": {
+  "kaynak": "kaynak/jarvis/tools/builtin.py",
+  "yama": [
+   "build"
+  ]
+ },
+ "jarvis.ui.window": {
+  "kaynak": "kaynak/jarvis/ui/window.py",
+  "yama": [
+   "Api.post"
+  ]
+ },
+ "jarvis.ek_bellek": {
+  "kaynak": "kaynak/jarvis/ek_bellek.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_spotify": {
+  "kaynak": "kaynak/jarvis/ek_spotify.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_yetenek": {
+  "kaynak": "kaynak/jarvis/ek_yetenek.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_ozet": {
+  "kaynak": "kaynak/jarvis/ek_ozet.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_uyandir": {
+  "kaynak": "kaynak/jarvis/ek_uyandir.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_ses": {
+  "kaynak": "kaynak/jarvis/ek_ses.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_fikir": {
+  "kaynak": "kaynak/jarvis/ek_fikir.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_fikir_dosya": {
+  "kaynak": "kaynak/jarvis/ek_fikir_dosya.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_sonra": {
+  "kaynak": "kaynak/jarvis/ek_sonra.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_paket": {
+  "kaynak": "kaynak/jarvis/ek_paket.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_canli": {
+  "kaynak": "kaynak/jarvis/ek_canli.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_hava": {
+  "kaynak": "kaynak/jarvis/ek_hava.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_ogren": {
+  "kaynak": "kaynak/jarvis/ek_ogren.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_model": {
+  "kaynak": "kaynak/jarvis/ek_model.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_konsey": {
+  "kaynak": "kaynak/jarvis/ek_konsey.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_arastir": {
+  "kaynak": "kaynak/jarvis/ek_arastir.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_fikir_arac": {
+  "kaynak": "kaynak/jarvis/ek_fikir_arac.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_isler": {
+  "kaynak": "kaynak/jarvis/ek_isler.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_sema": {
+  "kaynak": "kaynak/jarvis/ek_sema.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_kod": {
+  "kaynak": "kaynak/jarvis/ek_kod.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_mcp": {
+  "kaynak": "kaynak/jarvis/ek_mcp.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_yetenek_tohum": {
+  "kaynak": "kaynak/jarvis/ek_yetenek_tohum.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_ekran": {
+  "kaynak": "kaynak/jarvis/ek_ekran.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_anla": {
+  "kaynak": "kaynak/jarvis/ek_anla.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_hermes": {
+  "kaynak": "kaynak/jarvis/ek_hermes.py",
+  "yeni_modul": true
+ },
+ "jarvis.updates": {
+  "kaynak": "kaynak/jarvis/updates.py",
+  "yama": [
+   "enabled"
+  ]
+ },
+ "jarvis.about": {
+  "kaynak": "kaynak/jarvis/about.py",
+  "yama": [
+   "prompt_block",
+   "asked",
+   "other_person",
+   "key_mail",
+   "as_dict"
+  ]
+ },
+ "jarvis.story": {
+  "kaynak": "kaynak/jarvis/story.py",
+  "yama": [
+   "enabled",
+   "state",
+   "_save"
+  ]
+ },
+ "jarvis.ek_yayin": {
+  "kaynak": "kaynak/jarvis/ek_yayin.py",
+  "yeni_modul": true
+ },
+ "jarvis.brand": {
+  "kaynak": "kaynak/jarvis/brand.py",
+  "yama": [
+   "custom",
+   "window_title"
+  ]
+ },
+ "jarvis.ek_gelisim": {
+  "kaynak": "kaynak/jarvis/ek_gelisim.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_kendi": {
+  "kaynak": "kaynak/jarvis/ek_kendi.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_marka": {
+  "kaynak": "kaynak/jarvis/ek_marka.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_pano": {
+  "kaynak": "kaynak/jarvis/ek_pano.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_web": {
+  "kaynak": "kaynak/jarvis/ek_web.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_web_dosya": {
+  "kaynak": "kaynak/jarvis/ek_web_dosya.py",
+  "yeni_modul": true
+ },
+ "jarvis.ek_surum": {
+  "kaynak": "kaynak/jarvis/ek_surum.py",
+  "yeni_modul": true
+ }
+}

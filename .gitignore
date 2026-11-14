@@ -1,0 +1,46 @@
+# Workspace download/staging area
+/google_drive/
+
+# Python build/test artifacts
+__pycache__/
+*.py[cod]
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage/
+build/
+
+# Frontend dependencies/build output
+**/node_modules/
+**/dist/
+**/.vite/
+*.tsbuildinfo
+npm-debug.log*
+
+# Local credentials and user data
+.env
+.env.*
+!.env.example
+**/settings.json
+**/memory.json
+**/phone_book.json
+**/jarvis.log
+
+# Large/runtime-only binaries and model files
+*.exe
+*.dll
+*.onnx
+*.tflite
+*.task
+*.zip
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
