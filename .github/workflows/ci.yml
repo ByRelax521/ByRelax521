@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHONPATH: bloom
-      JARVIS_DATA_DIR: ${{ runner.temp }}/bloom-ci-data
+      JARVIS_DATA_DIR: /tmp/bloom-ci-data
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
