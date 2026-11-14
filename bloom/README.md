@@ -54,7 +54,7 @@ Testler Gemini API'sine bağlanmaz, mikrofon/kamera açmaz ve gerçek kullanıc�
 ### Test sırasında düzeltilen kaynak sorunları
 
 - `index.html` içindeki Cloudflare Rocket Loader özniteliği Vite'ın giriş modülünü devre dışı bırakıyordu; standart `type="module"` kullanıldı ve sayfaya eklenmiş Cloudflare betiği kaldırıldı.
-- Aktif HUD girişi PWA kullanmıyor; kullanılmayan ve güvenlik uyarıları taşıyan `vite-plugin-pwa` bağımlılığı kaldırıldı. Eski `src/main.tsx` dosyasının tip bildirimi yerel hale getirildi.
+- PWA kullanılmadığı için güvenlik uyarıları taşıyan `vite-plugin-pwa` bağımlılığıyla eski giriş dosyasındaki service-worker kayıt/güncelleme kodu kaldırıldı.
 - Otomatik konuşma dili için geçersiz `None` sözlük anahtarı, `language_codes` alanına düzeltildi.
 - Türkçe ekin küçük harfli biçimi ve Windows mikrofon gizlilik sayfasını açan yol düzeltildi; bu üç davranış için regresyon testleri eklendi.
 - Lint komutu `node_modules` içindeki üçüncü taraf dosyaları taramayacak şekilde sınırlandırıldı.
