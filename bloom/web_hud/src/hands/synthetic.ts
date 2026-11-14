@@ -27,7 +27,7 @@ const FINGERS = [
 ];
 
 export function synthHand(pose: Pose): P[] {
-  const local: P[] = new Array(21);
+  const local: P[] = Array.from({ length: 21 }, () => ({ x: 0, y: 0 }));
   local[0] = { x: 0, y: 0 };
   // Parmaklar: her eklem bükülmeyle 80° kameraya döner; ekrana izdüşüm y bileşenini kısaltır
   FINGERS.forEach((f, i) => {
