@@ -45,10 +45,10 @@ Testler Gemini API'sine bağlanmaz, mikrofon/kamera açmaz ve gerçek kullanıc�
 
 - `npm ci --no-audit --no-fund`: temiz kurulum başarılı (49 paket).
 - `npm run build`: başarılı; Vite 8.3.8, 476 modül işlendi.
-- `npm run lint`: başarılı, 0 hata ve `src/hands/synthetic.ts:30` satırında 1 iyileştirme uyarısı (`new Array(21)`).
+- `npm run lint`: başarılı, 0 uyarı ve 0 hata.
 - `npm audit`: tüm bağımlılık ağacında 0 açık güvenlik uyarısı (kullanılmayan `vite-plugin-pwa` kaldırıldı).
 - Python regresyon testleri: 3/3 geçti (ayar, mikrofon veya ağ erişimi kullanmadan).
-- Kaynak Python dosyaları güncel Python grameriyle tarandı; sözdizimi hatası bulunmadı. Bu çalışma alanında Python 3.12 bulunmadığından tüm çekirdeği Python 3.12 altında çalıştırmak mümkün olmadı; Python 3.11 ile tam `compileall` uygun bir doğrulama sayılmaz (kaynak 3.12 f-string dilbilgisini kullanıyor).
+- Kaynak Python dosyaları güncel Python grameriyle tarandı; sözdizimi hatası bulunmadı. Yerel çalışma alanında Python 3.12 yok; bunun yerine GitHub Actions'ta Python 3.12 ile `compileall` ve 3 yardımcı regresyon testi başarıyla çalıştı. Bu, tam masaüstü/entegrasyon testi değildir.
 - Vite önizleme sunucusunda HTML ve React giriş modülü HTTP 200 döndürdü. Bu, masaüstü backend'inin veya Gemini/Windows ses-kamera özelliklerinin uçtan uca testi değildir.
 
 ### Test sırasında düzeltilen kaynak sorunları
@@ -65,5 +65,5 @@ Testler Gemini API'sine bağlanmaz, mikrofon/kamera açmaz ve gerçek kullanıc�
 2. **Platform CI'si:** Python 3.12 testlerini Windows ve macOS işlerinde çalıştırın; izin, ses aygıtı, uygulama başlatma ve HUD–backend akışlarını donanım yerine mock'larla test edin.
 3. **Daha geniş test kapsamı:** Gemini Live hata/yeniden bağlanma, araç izinleri, dosya işlemleri, hafıza gizliliği, mikrofon yaşam döngüsü ve güncelleme akışlarına birim ve entegrasyon testleri ekleyin.
 4. **Bağımlılık ve varlık yönetimi:** Python bağımlılıklarını sürüm kilidiyle belirtin; el/kamera modellerini çevrimdışı kullanım için gerekiyorsa lisans, kaynak ve SHA-256 bilgileriyle paketleyin. Şu an HUD'daki bazı modeller uzak URL'den alınabiliyor.
-5. **Lint uyarısı:** `synthetic.ts` içindeki uzunluğu belirtilen `new Array(21)` kullanımını daha açık bir dizi kurulumuyla değiştirin veya niyetini açıklayın.
+5. **CI tedarik zinciri:** GitHub Actions sürümlerini şu an güncelledik; sonraki aşamada action'ları tam commit SHA ile sabitleyip Dependabot/Renovate ile kontrollü güncelleme akışı kurun.
 6. **Gizli veri denetimi:** `.env`, API anahtarı, kullanıcı hafızası, günlük ve üretilmiş uygulama paketlerini GitHub'a eklemeden önce otomatik secret-scan ve release kontrolü çalıştırın.
