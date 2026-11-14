@@ -1,0 +1,28 @@
+/* JARVIS EK 3.2 — yazı tipi + konuşma akışı.
+   · "EK Display" (Oxanium), "EK Sans" (Chakra Petch), "EK Mono" (JetBrains Mono): hepsi Türkçe karakterleri (ğ ş İ ı ö ç ü) taşır, OFL.
+   · Sohbet kutusu ÖZGÜN görünümde (3.2.1'de geri alındı).
+   · "KONUŞ YA DA YAZ" ipucu ve "/ YAZ" yazısı gösterilmez. */
+:root{--disp:"EK Display","Oxanium","EK Sans",sans-serif}
+/* siberpunk yazı tipi yalnızca üst çubukta ve EK panellerinde; sohbet kutusu özgün yazı tipinde */
+#topbar,.overlay{--sans:"EK Sans","Chakra Petch","Segoe UI",system-ui,sans-serif;--mono:"EK Mono","JetBrains Mono",Consolas,ui-monospace,monospace}
+
+/* ---- üst çubuk / başlıklar: daha keskin, daha "siberpunk" ---- */
+#topbar .mark{font-family:var(--disp);font-weight:700;letter-spacing:.5em;text-shadow:0 0 14px rgba(var(--rgb),.55)}
+#topbar .st,#topbar .ctl,#topbar .clock{font-family:var(--disp);font-weight:500;letter-spacing:.2em}
+#topbar .ctl b{font-weight:700}
+.ek-eksheet h2,.eksheet h2,.overlay h2,.overlay .ttl{font-family:var(--disp);letter-spacing:.18em}
+
+/* ---- konuşma akışı: ÖZGÜN HUD görünümü (ortalı altyazı) geri getirildi; yalnızca canlı satır eklendi ---- */
+/* canlı (konuşulurken yazılan) satır: tek metin düğümü, harf harf yumuşak akar; ek animasyon/bulanıklık yok */
+.sub.live .ek-lt{display:inline}
+.sub.live .ek-lt::after{content:"";display:inline-block;width:2px;height:1em;margin-left:3px;vertical-align:-.14em;background:var(--c);
+  opacity:.75;animation:ekcaret 1.1s ease-in-out infinite}
+.sub.live.done .ek-lt::after{display:none}
+.sub.live.you .ek-lt::after{background:var(--dim)}
+@keyframes ekcaret{0%,100%{opacity:.75}50%{opacity:.12}}
+/* gerçek satır canlı satırın yerine geçerken yeniden "beliriş" animasyonu oynamasın (titreme yapıyordu) */
+.sub.ek-sabit{animation:none!important}
+
+/* ---- yazma satırı: özgün; yalnızca "KONUŞ YA DA YAZ" ipucu gizli ---- */
+#cmd::placeholder,#bar.asking #cmd::placeholder{color:transparent;opacity:0}
+#bar .hint{display:none}

@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "arena/**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  hud:
+    name: HUD build and lint
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: bloom/web_hud/package-lock.json
+      - run: npm ci
+        working-directory: bloom/web_hud
+      - run: npm run build
+        working-directory: bloom/web_hud
+      - run: npm run lint
+        working-directory: bloom/web_hud
+      - run: npm audit --audit-level=moderate
+        working-directory: bloom/web_hud
+
+  python:
+    name: Python 3.12 syntax and helper tests
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONPATH: bloom
+      JARVIS_DATA_DIR: /tmp/bloom-ci-data
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: python -m compileall -q bloom/jarvis bloom/win_entry.py
+      - run: python -m unittest discover -s bloom/tests -v

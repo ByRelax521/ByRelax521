@@ -1,0 +1,3 @@
+Bu klasör BLOOM'un kendi kaynak kodunun SALT OKUNUR kopyasıdır. BLOOM yalnızca sen izin verince (Yetenekler sekmesi › "Kendi koduna bakma izni") ve yalnızca okumak için bakar.
+Çalışan program bu dosyalar değildir (PyInstaller bayt kodu); işlevlerinin ~%82'si bayt koduyla birebir aynıdır, yamalı işlevler kaynaktan derlenir.
+Bu klasörü silersen/taşırsan program normal çalışır; yalnızca kendi kodunu inceleme özelliği "kaynak bulunamadı" der.
